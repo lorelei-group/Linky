@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Test Runner</title>
+
+		<link rel="stylesheet" type="text/css" href="../lib/mocha.css" />
+		<script type="text/javascript" src="../lib/handlebars.js"></script>
+		<script type="text/javascript" src="../lib/underscore.js"></script>
+		<script type="text/javascript" src="../lib/zepto.js"></script>
+		<script type="text/javascript" src="../lib/backbone.js"></script>
+		<script type="text/javascript" src="../lib/mocha.js"></script>
+		<script type="text/javascript" src="../lib/sinon.js"></script>
+		<script type="text/javascript" src="../lib/expect.js"></script>
+
+		<script>
+			mocha.setup({ ui: "bdd" });
+			if (location.hash === '#testem')
+				document.write('<script src="/testem.js"></'+'script>')
+		</script>
+
+		<script type="text/javascript" data-main="runner.js" src="../lib/require.js"></script>
+	</head>
+	<body>
+		<div id="mocha"></div>
+	</body>
+</html>
