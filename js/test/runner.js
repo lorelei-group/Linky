@@ -4,7 +4,7 @@
 	'use strict';
 
 	requirejs.config({
-		baseUrl:'../',
+		baseUrl: '../',
 		urlArgs: 'nocache=' + Date.now(),
 	});
 
