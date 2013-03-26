@@ -6,22 +6,22 @@ define(function(require) {
 	var Router = Backbone.Router.extend({
 
 		routes: {
-			'sample/:id': 'samplePage',
-			'*actions': 'render'
+			'desktop/:id': 'desktop',
+			'*actions': 'unknown'
 		},
 
 		initialize: function() {
 			Backbone.history.start();
+			page.render();
 		},
 
-		render: function() {
+		desktop: function(id) {
+			page.show(id);
+		},
+
+		unknown: function() {
 			page.show('error');
 			console.log('Default handler');
-		},
-
-		samplePage: function(id) {
-			page.show('sample-page');
-			require('views/sample_page').render(id);
 		}
 
 	});
