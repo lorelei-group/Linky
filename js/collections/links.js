@@ -15,14 +15,14 @@ define(function(require) {
 	return Backbone.Collection.extend({
 		model: Link,
 
-		initialize: function(options) {
-			this.desktop = options.desktop;
+		initialize: function(desktop) {
+			this.desktop = desktop;
 		},
 
 		fetch: function() {
 			var desktop = this.desktop;
 			this.reset(all.filter(function(link) {
-				return link.get('desktop') === self.desktop;
+				return link.get('desktop') === desktop;
 			}));
 		}
 	});

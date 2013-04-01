@@ -13,10 +13,39 @@ html, body {
 
 div#page-content {
 	.display(flex);
-	height: 1%;
+	height: 100%;
 }
 
 .desktop {
-	.display(flex);
 	.flex(1);
+	.display(flex);
+}
+
+.desktop {
+	padding: 10px;
+}
+
+a {
+	float: left;
+	margin: 10px;
+	border: 1px solid blue;
+	text-align: center;
+	width: 100px;
+	padding: 5px;
+
+	div button {
+		float: right;
+	}
+
+	img {
+		display: block;
+		width: 64px;
+		height: 64px;
+		margin: 8px 13px;
+		border-radius: 5px;
+	}
+
+	span {
+		margin: 5px;
+	}
 }

@@ -10,7 +10,15 @@
 		<script type="text/javascript" src="js/lib/less.js"></script>
 
 
-		<script type="text/template" id="sample-page-content">
+		<script type="text/template" id="link">
+			<a href="{{ url }}">
+				<div>
+					<button class="edit">E</button>
+					<button class="delete">X</button>
+				</div>
+				<img src="{{ icon }}">
+				<span>{{ name }}</span>
+			</a>
 		</script>
 
 	</head>

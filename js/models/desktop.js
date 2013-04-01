@@ -1,6 +1,7 @@
 define(function(require) {
 	'use strict';
 
+	var Link = require('models/link');
 	var Links = require('collections/links');
 
 	return Backbone.Model.extend({
@@ -16,8 +17,16 @@ define(function(require) {
 			this.refreshLinks();
 		},
 
+		addLink: function(link) {
+			if (!(link instanceof Link))
+				link = new Link(link);
+
+			link.set('desktop', this.id);
+			return link;
+		},
+
 		refreshLinks: function() {
-			this.links = new Links(this.get('index'));
+			this.links = new Links(this.id);
 			this.links.fetch();
 		}
 	});
